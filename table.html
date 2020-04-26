@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="icons8-пингвин-64.png">
+    
+    <title>Table</title>
+    <style>
+
+        .mainTable  {
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 100px;
+            justify-content: center;
+            align-content: center;
+            border-color:rgb(45, 103, 230);
+            
+        }
+
+        .tableCaption {
+            margin-top: 40px;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+
+        }
+
+        .divContainer {
+            background-color: rgb(245, 201, 201);
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            padding: 15px 0 7px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .funcBlock {
+            position: absolute;
+            padding: 10px 0 10px 0;
+            margin-top: 100 px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .function {
+            min-width: 160px;
+            height: 75px;
+            border-right: 1px solid rgb(221, 218, 218);
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .function input {
+            width: 150px;
+            display: block;
+        }
+
+        .function button, select {
+            width: 100%;
+            display: block;
+        }
+
+        #selectBorder {
+            width: 300px;
+            position:relative;
+            margin-top: 0px;
+            margin: 5px
+
+        }
+
+        p {
+            margin: 0;
+            font-size: 12px;
+            text-align: center;
+        }
+  
+        .mainTable {
+        border-collapse: collapse;
+        counter-reset: schetchik;   
+        }
+
+        .mainTable tr {
+        counter-increment: schetchik;  /* при встрече тега tr счётчик с названием "schetchik" увеличивается на единицу */ 
+        }
+
+        .mainTable td,
+        .mainTable tr:before {
+        padding: .1em .5em;
+        border: 1px solid #E7D5C0;
+        }
+
+        .mainTable tr:before {
+        content: counter(schetchik);  /* значение счётчика с названием "schetchik" записывается в первую клетку строки */ 
+        display: table-cell;
+        vertical-align: middle;
+        color: #978777;
+        }
+ 
+        html {
+        position: relative;
+        min-height: 100%;
+        }
+        body {
+        margin-bottom: 70px;
+        }
+        #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #f2f2f2;
+        }
+
+    </style>
+  </head>
+  <body>
+    
+    <!-- Шапка сайта -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkcyan">
+        <a class="navbar-brand" href="index.html">
+            <img src="icons8-пингвин-64.png" width="30" height="30" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html" style="color:white">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="table.html" style="color:white">Table</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"style="color:white">Contact</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">
+                Info
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="tasks.html" style="color:white">Tasks</a>
+                <a class="dropdown-item" href="map.html" style="color:white">Map</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://github.com/m-ushatov">GitHub profile</a>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+</nav>
+
+<!-- Карточка с навигацией (в заголовке) -->
+<div class="card">
+    <!-- Шапка с навигацией -->
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#item1">Добавление заголовка</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#item2">Удаление строки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#item3">Удаление столбца</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#item4">Удаление таблицы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#item5">Случайный выбор</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#item6">Оформление границ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#item7">Добавление строк/столбцов</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Текстовый контент -->
+    <div class="card-body tab-content">
+        <div class="tab-pane fade show active" id="item1">
+            Введите желаемый заголовок для таблицы
+            <input type="text" id="inputCaptionName"></input>
+            <button type="submit" id="addCaptionBut" class="btn btn-primary">Добавить заголовок</button>
+        </div>
+        <div class="tab-pane fade" id="item2">
+            Введите номер строки для удаления
+            <input type="number" min="1" max="30" id="rowForDelete"></input>
+            <button type="submit" id="deleteRowBut" class="btn btn-primary">Удалить строку</button>
+        </div>
+        <div class="tab-pane fade" id="item3">
+            Введите номер столбца для удаления
+            <input type="number" min="1" max="20" id="colForDelete"></input>
+            <button type="submit" id="deleteColBut" class="btn btn-primary">Удалить столбец</button>
+        </div>
+        <div class="tab-pane fade" id="item4">
+            Нажмите на кнопку, чтобы удалить таблицу
+            <button type="submit" id="deleteTableBut" class="btn btn-primary">Удалить таблицу</button>
+        </div>
+        <div class="tab-pane fade" id="item5">
+            Хотите немного магии? Нажмите на кнопку!
+            <button type="submit" id="magicBut" class="btn btn-primary">Магия</button>
+        </div>
+        <div class="tab-pane fade" id="item6">
+            <select name="selectBorder" id="selectBorder">123</select>
+            <input type="number" min="1" max="40" id="inputBorderWidth" style="position:relative; margin: 5px"></input>
+            <button type="submit" id="changeBorderBut" class="btn btn-primary">Применить</button>
+        </div>
+        <div class="tab-pane fade" id="item7">
+            Для добавления столбца или строки используйте кнопки справа
+            <button type="submit" id="addCol" class="btn btn-primary" style="position:relative; margin-left: 5px">Добавить столбец</button>
+            <button type="submit" id="addRow" class="btn btn-primary" style="position:relative; margin-left: 5px">Добавить строку</button>
+        </div>
+    </div>
+</div><!-- Конец карточки -->
+
+<h3 style="visibility: hidden;" id="tableHeader">Заголовок</h3>
+<script type="text/javascript" src="table.js"></script>
+
+<!-- Футер -->
+
+<footer class="mt-auto" id="footer">
+    <div class="container-fluid text-center d-flex navbar-light align-items-center justify-content-center h-100" style="background-color:darkcyan; bottom:0;">
+        <p class="text-center" style="align-content: center; color:white; font-size: medium;">Ушатов Михаил, N3456<br>Университет ИТМО, 2020</p>
+  </div>
+  </footer>
+      
+    </body>
+  
+   
+  </html>
